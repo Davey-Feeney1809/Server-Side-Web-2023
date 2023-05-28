@@ -1,0 +1,13 @@
+<h2> All about :{{person.name}}</h2>
+<h3>Author name : {{person.Author}}</h3>
+{{#if person.published}}
+<h3>Published : {{person.published}}</h3>
+{{/if}}
+<img src={{person.imageurl}} alt="photo of the person">
+
+<a href='{{person.name}}/edit'>
+<button type="button" class="btn btn-primary">Edit</button></a>
+
+<a href='/book/{{person.name}}/delete'
+ onclick="return confirm('are you sure you want to delete this book?');">
+<button type="button" class="btn btn-danger">Delete</button> </a>
